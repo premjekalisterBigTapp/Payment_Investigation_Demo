@@ -1,0 +1,202 @@
+Updated Realistic Ingestion messages
+
+============================================
+Fail
+============================================
+
+{1:F01DEMOBANKA600AXXX0000000000}{2:I103WAYNUST00XXXXN}{3:{108:XYZ-789}}
+{4:
+:20:XYZ-789
+:23B:CRED
+:32A:230501USD50000,00
+:50K:/1234567890
+John DDoe
+123 Main St
+:59:/9876543210
+Global Trading Inc.
+456 Market St
+:71A:SHA
+-}
+
+===================================================
+
+
+<AppHdr>
+  <Fr>...</Fr>
+  <To>CBUAE-UAEFTS</To>
+  <BizMsgIdr>ABC-123</BizMsgIdr>
+</AppHdr>
+<Document>
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>ABC-123</MsgId>
+      ...
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <Amt>
+        <InstdAmt Ccy="AED">15000.00</InstdAmt>
+      </Amt>
+      <DbtrAcct>
+        <Id><IBAN>AE290000000123456789012</IBAN></Id>
+      </DbtrAcct>
+      <CdtrAcct>
+        <Id><IBAN>AE8800000009876543210ZY</IBAN></Id>
+      </CdtrAcct>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+===========================================================
+
+<AppHdr>
+  <Fr>...</Fr>
+  <To>SWIFT-SION</To>
+  <BizMsgIdr>P-SWIFT-002</BizMsgIdr>
+</AppHdr>
+<Document>
+  <pacs.008.001.08>
+    <GrpHdr>
+      <MsgId>P-SWIFT-002</MsgId>
+      ...
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <Amt>
+        <InstdAmt Ccy="EUR">7500.00</InstdAmt>
+      </Amt>
+      ...
+      <Purp>
+        <Cd>INVALID_CODE</Cd>
+      </Purp>
+    </CdtTrfTxInf>
+  </pacs.008.001.08>
+</Document>
+
+============================================
+
+<AppHdr>
+  <Fr>...</Fr>
+  <To>CBUAE-IPI</To>
+  <BizMsgIdr>IPI-456</BizMsgIdr>
+</AppHdr>
+<Document>
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>IPI-456</MsgId>
+      ...
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <Amt>
+        <InstdAmt Ccy="AED">500.00</InstdAmt>
+      </Amt>
+      <DbtrAcct>
+        <Id><IBAN>AE290000000123456789012</IBAN></Id>
+      </DbtrAcct>
+      <CdtrAcct>
+        <Id><IBAN>AE880000000987654321011</IBAN></Id>
+      </CdtrAcct>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+
+
+=====================================================
+Pass
+=====================================================
+
+
+{1:F01DEMOBANKA600AXXX0000000000}{2:I103WAYNUST00XXXXN}{3:{108:PASS-MT-002}}
+{4:
+:20:PASS-MT-002
+:23B:CRED
+:32A:230502USD120000,00
+:50K:/246813579
+Valid Sender Inc
+789 Business Ave
+:59:/135792468
+Valid Receiver LLC
+101 Enterprise Rd
+:71A:SHA
+-}
+
+=========================================================
+
+<AppHdr>
+  <Fr>...</Fr>
+  <To>CBUAE-UAEFTS</To>
+  <BizMsgIdr>PASS-UAE-001</BizMsgIdr>
+</AppHdr>
+<Document>
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PASS-UAE-001</MsgId>
+      ...
+    </G"rpHdr>
+    <CdtTrfTxInf>
+      <Amt>
+        <InstdAmt Ccy="AED">250000.00</InstdAmt>
+      </Amt>
+      <DbtrAcct>
+        <Id><IBAN>AE290000000111111111111</IBAN></Id>
+      </DbtrAcct>
+      <CdtrAcct>
+        <Id><IBAN>AE880000000222222222222</IBAN></Id>
+      </CdtrAcct>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+==================================================
+
+<AppHdr>
+  <Fr>...</Fr>
+  <To>SWIFT-SION</To>
+  <BizMsgIdr>PASS-ISO-003</BizMsgIdr>
+</AppHdr>
+<Document>
+  <pacs.008.001.08>
+    <GrpHdr>
+      <MsgId>PASS-ISO-003</MsgId>
+      ...
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <Amt>
+        <InstdAmt Ccy="EUR">95000.00</InstdAmt>
+      </Amt>
+      ...
+      <Purp>
+        <Cd>GDDS</Cd>
+      </Purp>
+    </CdtTrfTxInf>
+  </pacs.008.001.08>
+</Document>
+
+=====================================================
+
+<AppHdr>
+  <Fr>...</Fr>
+  <To>CBUAE-IPI</To>
+  <BizMsgIdr>PASS-IPI-004</BizMsgIdr>
+</AppHdr>
+<Document>
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PASS-IPI-004</MsgId>
+      ...
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <Amt>
+        <InstdAmt Ccy="AED">150.00</InstdAmt>
+      </Amt>
+      <DbtrAcct>
+        <Id><IBAN>AE290000000111111111111</IBAN></Id>
+      </DbtrAcct>
+      <CdtrAcct>
+        <Id><IBAN>AE880000000222222222222</IBAN></Id>
+      </CdtrAcct>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
+
+
+=======================================================
